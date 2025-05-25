@@ -2,4 +2,4 @@
 
 . .env
 
-docker run -e PRODUCT_VERSION=8.3.3 -e BUILD_NUMBER=18 -v $(pwd)/out:/build_tools/out onlyoffice-document-editors-builder-deps
+docker run -e PRODUCT_VERSION="${PRODUCT_VERSION}" -e BUILD_NUMBER="${BUILD_NUMBER}" -v $(pwd)/out:/build_tools/out onlyoffice-document-editors-builder-deps

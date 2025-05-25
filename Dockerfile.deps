@@ -7,3 +7,7 @@ RUN /usr/bin/python deps.py
 RUN /bin/rm /build_tools/tools/linux/packages_complete
 RUN apt autoremove --purge -y 
 RUN /usr/bin/npm install --global yarn 
+
+WORKDIR /build_tools
+
+CMD ["sh", "-c", "cd tools/linux && python3 ./automate.py"]
