@@ -2,7 +2,7 @@
 
 ## Howto
 
-Thoses instructions are only tested on Debian 12. 
+Thoses instructions are only tested on Debian 12.
 
 ### Setup environment
 
@@ -34,7 +34,7 @@ cd $BUILD_DIR/build_unlimited
 docker build --tag onlyoffice-document-editors-builder-deps -f Dockerfile.deps .
 ```
 
-### Find Onlyoffice version
+#### Find Onlyoffice version
 
 ```
 cd $BUILD_DIR/build_tools
@@ -52,25 +52,25 @@ cd $BUILD_DIR/build_unlimited
 ./build_onlyoffice.sh 
 ```
 
-Onlyoffice binaries are available in `/opt/build_tools/out/`.
+Onlyoffice binaries are available in `$BUILD_DIR/build_tools/out/`.
 
 ### Build Debian packages
 
-#### Setup docker images
+#### Setup docker image
 
 ```
 cd $BUILD_DIR/build_unlimited
 docker build --tag onlyoffice-deb-builder . -f Dockerfile.packages
 ```
 
-#### Make debs
+#### Make Debian packages
 
 ```
 cd $BUILD_DIR/build_unlimited
 ./build_debian_packages.sh
 ```
 
-Debian packages are available in `/opt/document-server-package/deb/`.
+Debian packages are available in `$BUILD_DIR/document-server-package/deb/`.
 
 ## Usefull Links
 
