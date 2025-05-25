@@ -6,7 +6,17 @@ Thoses instructions are only tested on Debian 12.
 
 ### Setup environment
 
-Install docker: https://docs.docker.com/engine/install/debian/
+#### Install basic tools
+
+```
+apt update && apt upgrade -y && apt install -y vim git fail2ban sudo tmux
+```
+
+#### Install docker
+
+https://docs.docker.com/engine/install/debian/
+
+#### Set build Directory
 
 Chose a build directory and export path to BUILD_DIR variable, for instance:
 
@@ -17,7 +27,7 @@ export BUILD_DIR=/opt/onlyoffice
 ### Clone Git repositories
 
 ```
-mkdir $BUILD_DIR && cd $BUILD_DIR 
+mkdir $BUILD_DIR && cd $BUILD_DIR
 git clone https://code.globenet.org/gn/onlyoffice/build_unlimited.git
 git clone https://code.globenet.org/gn/onlyoffice/build_tools.git
 git clone https://github.com/ONLYOFFICE/document-server-package.git
@@ -49,7 +59,7 @@ number can be your own).
 
 ```
 cd $BUILD_DIR/build_unlimited
-./build_onlyoffice.sh 
+./build_onlyoffice.sh
 ```
 
 Onlyoffice binaries are available in `$BUILD_DIR/build_tools/out/`.
