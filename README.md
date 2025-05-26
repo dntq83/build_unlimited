@@ -16,7 +16,7 @@ apt update && apt upgrade -y && apt install -y vim git fail2ban sudo tmux
 
 https://docs.docker.com/engine/install/debian/
 
-#### Set build Directory
+#### Set build directory
 
 Chose a build directory and export path to BUILD_DIR variable, for instance:
 
@@ -24,7 +24,7 @@ Chose a build directory and export path to BUILD_DIR variable, for instance:
 export BUILD_DIR=/opt/onlyoffice
 ```
 
-### Clone Git repositories
+#### Clone Git repositories
 
 ```
 mkdir $BUILD_DIR && cd $BUILD_DIR
