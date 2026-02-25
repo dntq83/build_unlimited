@@ -18,5 +18,4 @@ PRODUCT_VERSION="${PRODUCT_VERSION}" BUILD_NUMBER="${BUILD_NUMBER}" make deb_dep
 cd ${DOCUMENT_SERVER_PACKAGE_PATH}/deb/build
 apt-get -qq build-dep -y ./
 cd ${DOCUMENT_SERVER_PACKAGE_PATH}
-cp -Ruv /newfonts/* ${DOCUMENT_SERVER_PACKAGE_PATH}/deb/build/var/www/onlyoffice/documentserver/core-fonts/
 PRODUCT_VERSION="${PRODUCT_VERSION}" BUILD_NUMBER="${BUILD_NUMBER}" make deb
